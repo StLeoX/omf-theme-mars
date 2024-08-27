@@ -29,7 +29,9 @@ function fish_prompt
     if [ (_is_git_dirty) ]
       set git_info "$blue ($yellow$git_branch±$blue)"
     else
-      if test (_git_branch_name) = 'master'
+      if test (_git_branch_name) = 'master' ||
+         test (_git_branch_name) = 'main'   ||
+         test (_git_branch_name) = 'dev'
         set git_info "$blue ($red$git_branch$blue)"
       else
         set git_info "$blue ($normal$git_branch$blue)"
