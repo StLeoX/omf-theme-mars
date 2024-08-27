@@ -21,7 +21,7 @@ function fish_prompt
   else
       set arrow " $red▶︎︎"
   end
-  set -l cwd $cyan(prompt_pwd)
+  set -l cwd $cyan(hostname):$cyan(prompt_pwd)
 
   if [ (_git_branch_name) ]
     set git_branch (_git_branch_name)
